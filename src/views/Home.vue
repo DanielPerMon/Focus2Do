@@ -4,20 +4,31 @@
     <div id="botones">
       <v-btn style="margin: 20px"
         ><router-link style="text-decoration: none; color: inherit" to="/Login">
-          Configuración<v-icon right>fa-cog</v-icon>
+          Configuración
         </router-link>
       </v-btn>
       <v-btn style="margin: 20px"
         ><router-link style="text-decoration: none; color: inherit" to="/Login">
-          Login<v-icon right>fa-sign-in</v-icon>
+          Login
         </router-link></v-btn
       >
     </div>
   </div>
   <div class="maincontainer">
-    <v-card><v-card-title class="white--text mt-8">Tareas de Hoy</v-card-title></v-card>
-    <v-card><v-card-title class="white--text mt-8">Tareas Completadas</v-card-title></v-card>
-    <v-card><v-card-title class="white--text mt-8">Cronómetro</v-card-title></v-card>
+    <v-card
+      ><v-card-title class="white--text mt-8">Tareas de Hoy</v-card-title>
+      <v-card-actions class="justify-end">
+        <v-btn>Ver Tareas</v-btn>
+      </v-card-actions></v-card
+    >
+    <v-card
+      ><v-card-title class="white--text mt-8"
+        >Tareas Completadas</v-card-title
+      ></v-card
+    >
+    <v-card
+      ><v-card-title class="white--text mt-8">Cronómetro</v-card-title></v-card
+    >
   </div>
 </template>
 
@@ -51,9 +62,9 @@ v-card {
   display: flex;
   border-radius: 4px !important;
 }
-v-card-title{
+v-card-title {
   margin: auto;
-  color:white;
+  color: white;
 }
 img {
   height: inherit;
@@ -65,6 +76,7 @@ h1 {
 v-btn {
   background-color: #ef5350;
   border-radius: 4px !important;
+  color:white;
 }
 #botones {
   position: absolute;
