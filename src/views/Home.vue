@@ -15,20 +15,28 @@
     </div>
   </div>
   <div class="maincontainer">
-    <v-card
-      ><v-card-title class="white--text mt-8">Tareas de Hoy</v-card-title>
-      <v-card-actions class="justify-end">
-        <v-btn>Ver Tareas</v-btn>
-      </v-card-actions></v-card
-    >
-    <v-card
-      ><v-card-title class="white--text mt-8"
-        >Tareas Completadas</v-card-title
-      ></v-card
-    >
-    <v-card
-      ><v-card-title class="white--text mt-8">Cronómetro</v-card-title></v-card
-    >
+    <div class="card">
+      <div class="content">
+        <h2>Tareas de Hoy</h2>
+        <button class="button"><router-link style="text-decoration: none; color: inherit" to="/tareas">
+          Tareas
+        </router-link></button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2>Tareas Completadas</h2>
+        <button class="button"><router-link style="text-decoration: none; color: inherit" to="/Login">
+          Reporte
+        </router-link></button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2>Cronómetro</h2>
+        <button class="button">Empezar</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -41,7 +49,9 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+
+
 .maincontainer {
   width: 100%;
   display: flex;
@@ -54,17 +64,37 @@ export default {
   color: white;
   width: 100%;
 }
-v-card {
-  margin: auto;
-  background-color: #dc2626;
-  width: 20%;
-  min-height: 70vh;
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
   display: flex;
-  border-radius: 4px !important;
-}
-v-card-title {
-  margin: auto;
+  flex-direction: column;
+  margin: 1.5rem;
+  overflow: hidden;
+  width: 30%;
+  background-color: #dc2626;
+  border: 0.1rem solid rgba(255, 255, 255, 0.18);
   color: white;
+}
+.card h2 {
+  letter-spacing: 0.1rem;
+  margin: 1rem 0;
+}
+.content {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.button {
+  background-color: #ef5350;
+  font-family: Rhodium Libre;
+  border-radius: 4px;
+  color: white;
+  margin-left: 70%;
+  border: 0.1rem solid rgba(255, 255, 255, 0.18);
 }
 img {
   height: inherit;
@@ -76,7 +106,7 @@ h1 {
 v-btn {
   background-color: #ef5350;
   border-radius: 4px !important;
-  color:white;
+  color: white;
 }
 #botones {
   position: absolute;
